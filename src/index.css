@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* ... other theme customizations ... */
+  /* Define your 'sans' font stack to be Inter */
+  --font-sans:  "sans-serif";
+  /* You could also define other custom fonts if needed, e.g.: */
+  --font-heading: "YourHeadingFont", "sans-serif";
+  --color-primary-500: #3b82f6;
+
+  --animate-circus-swing: swing 2s ease-in-out infinite alternate;
+  @keyframes swing {
+    0% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+  --animate-clown-bounce: bounce-clown 1s ease-out infinite;
+  @keyframes bounce-clown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  --animate-ping: ping 1s ease-in infinite;
+
+  @keyframes ping {
+    85%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+/* Optional: Apply 'Inter' to the body by default */
+@layer base {
+  body {
+    font-family: var(
+      --font-sans
+    ); /* This makes Inter the default for all text */
+  }
+}
+
+#nprogress {
+  pointer-events: none;
+}
+#nprogress .bar {
+  background: #ef4444;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px !important;
+}
+
+@layer utilities {
+  .text-stroke {
+  -webkit-text-stroke: 1px black;
+  }
+  .text-stroke-white {
+  -webkit-text-stroke: 1px white;
+  }
+  .text-stroke-2 {
+  -webkit-text-stroke-width: 2px;
+  }
+  .text-outline {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  }
+  }
