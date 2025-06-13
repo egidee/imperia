@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Network from "./components/Network";
 import Messages from "./components/Messages";
 import Dashboard from "./components/Dashboard";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import ProgressBar from "./components/ProgressBar";
 import Profile from "./components/Profile"
 
